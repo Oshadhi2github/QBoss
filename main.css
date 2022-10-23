@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.outer{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-image: url("https://img.freepik.com/free-vector/magic-portal-mountain-top-alien-planet-surface-futuristic-landscape-background-with-glowing-entrance-rock-starry-sky-fantasy-book-computer-game-scene-cartoon-vector-illustration_107791-4566.jpg?w=740&t=st=1666500584~exp=1666501184~hmac=9e12cd487f0bc21724f9e926cc542dee484a8ed20114fe704d10e35b089496d7");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
