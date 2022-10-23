@@ -24,8 +24,9 @@
     color: white;
 }
 .login-wrapper{
+    padding: 20px;
     width: 400px;
-    height: 250px;
+    height: auto;
     background-color: rgb(255,255,255,0.8);
     border-radius: 10px;
 }
@@ -37,7 +38,7 @@
     padding: 0 20px;
     margin-bottom: 50px;
 }
-.bottom-outer>h4{
+.bottom-outer>h5{
     color: white;
     padding: 0 20px;
 }
