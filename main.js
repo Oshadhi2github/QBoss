@@ -8,13 +8,16 @@ letsGetStarted= ()=>{
     let levelElement =
         document.getElementById('level');
     setBorderColor(playerNameElement)
+
     let tempPlayerName=playerNameElement.value;
     if (tempPlayerName.trim()===''){ //trim rid spaces
         playerNameElement.style.borderColor='red';
         alert('please insert name and level to continue!')
         return;
     }
-   //====
+   playerName=tempPlayerName;
+    level=levelElement.value;
+    //==>redirecting gaming console==>
 }
 setBorderColor=(element)=>{
     element.style.borderColor='';
