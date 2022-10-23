@@ -18,6 +18,8 @@ letsGetStarted= ()=>{
    playerName=tempPlayerName;
     level=levelElement.value;
     //==>redirecting gaming console==>
+    window.location.href="game.html";
+    console.log(playerName)
 }
 setBorderColor=(element)=>{
     element.style.borderColor='';
