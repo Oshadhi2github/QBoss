@@ -104,26 +104,19 @@ submitAnswer=()=>{
     }
 
     findAnswer();
+
+
     if (correctAnswer===Number(requestAnswer)){
         document.getElementById('congrats').innerHTML='Congratulations';
     }else{
         document.getElementById('congrats').innerHTML=`Oops...(A : ${correctAnswer})`;
         document.getElementById('congrats').style.color='#035400';
     }
+    setTimeout(()=>{
+        greeting();
+    },3000);
 
-   let result={
-        question_id:'',
-       question: question,
-       request_Answer: requestAnswer,
-       answer:correctAnswer,
-       state:'',
-       time:time
-    };
-    resultSheet.push(result);
 
-    generateQuestion();
-
-    console.log(resultSheet);
 
 }
 findAnswer=()=>{
@@ -135,5 +128,20 @@ findAnswer=()=>{
         case "%": correctAnswer=number1%number2;
     }
 
+}
+greeting=()=>{
+    let result={
+        question_id:'',
+        question: question,
+        request_Answer: requestAnswer,
+        answer:correctAnswer,
+        state:'',
+        time:time
+    };
+    resultSheet.push(result);
+
+    generateQuestion();
+
+    console.log(resultSheet);
 }
 //end game console js
