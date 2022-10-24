@@ -176,7 +176,7 @@ setResult=()=>{
     <td>${tempDataSet.question}</td> 
     <td>${tempDataSet.request_Answer}</td>
     <td>${tempDataSet.answer}</td>
-    <td>${tempDataSet.state?'😁':'😢'}</td> 
+    <td>${tempDataSet.state?'😊':'😢'}</td> 
     <td>${tempDataSet.time}</td>
  </tr>`
         element.innerHTML+=newRow;
