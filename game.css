@@ -133,3 +133,8 @@
 .answer-outer{
     margin-top: 50px;
 }
+.congrats{
+    text-align: center;
+    color: #2980b9;
+    margin-top: 30px;
+}

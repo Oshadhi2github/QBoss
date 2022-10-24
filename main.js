@@ -8,6 +8,7 @@ let question='';
 let time=0;
 let counter=null;
 let requestAnswer;
+let correctAnswer=0;
 
 
 //start login form js
@@ -99,7 +100,23 @@ submitAnswer=()=>{
         alert('please insert a number or start the game');
         return;
     }
-    console.log(requestAnswer);
+
+    findAnswer();
+    if (correctAnswer===Number(requestAnswer)){
+        document.getElementById('congrats').innerHTML='Congratulations';
+    }else{
+        document.getElementById('congrats').innerHTML=`Oops...(A : ${correctAnswer})`;
+    }
+
+}
+findAnswer=()=>{
+    switch (exp){
+        case "+": correctAnswer=number1+number2;break;
+        case "-": correctAnswer=number1-number2;break;
+        case "/": correctAnswer=number1/number2;break;
+        case "*": correctAnswer=number1*number2;break;
+        case "%": correctAnswer=number1%number2;
+    }
 
 }
 //end game console js
