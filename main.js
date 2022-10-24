@@ -1,5 +1,10 @@
 let playerName='';
 let level='';
+let number1=0;
+let number2=0;
+let exp='';
+operators=['+','-','/','*','%'];
+let question='';
 
 
 //start login form js
@@ -47,8 +52,11 @@ startGame=()=>{
 
 generateQuestion=()=>{
     let selectedMax=checkLevel();
-    let number1=generateNumber(1,selectedMax);
-    console.log(number1)
+    number1=generateNumber(1,selectedMax);
+    number2=generateNumber(2,selectedMax);
+    exp=operators[generateNumber(0,5)];
+    question = `${number1} ${exp} ${number2} =?`;
+
 }
 
 generateNumber=(min,max)=>{
