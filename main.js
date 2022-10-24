@@ -5,6 +5,8 @@ let number2=0;
 let exp='';
 operators=['+','-','/','*','%'];
 let question='';
+let time=0;
+let counter=null;
 
 
 //start login form js
@@ -44,7 +46,7 @@ setPlayerData = key => {
     document.getElementById('player-level')
         .innerHTML=level;
 }
-//end game console js
+
 
 startGame=()=>{
     generateQuestion();
@@ -59,6 +61,7 @@ generateQuestion= () =>{
     question = `${number1} ${exp} ${number2} =?`;
     document.getElementById('question')
         .innerHTML=question;
+    executeTime();
 
 }
 
@@ -75,3 +78,13 @@ checkLevel=()=>{
     }
     return levelNumber;
 }
+executeTime=()=>{
+    setInterval(classNames=>{
+        time++;
+        document.getElementsByClassName('counter-time')[0].innerHTML=time;
+        if(time===60){
+            alert('Failed');
+        }
+    },1000);
+}
+//end game console js
