@@ -25,3 +25,13 @@ setBorderColor=(element)=>{
     element.style.borderColor='';
 }
 //end login form js
+
+//start game console js
+setPlayerData = elementId => {
+    document.getElementById('player-name')
+    .innerHTML=playerName;
+    document.getElementById('player-level')
+        .innerHTML=level;
+    console.log(playerName)
+}
+//end game console js
