@@ -95,7 +95,7 @@ clearTime=()=>{
 }
 submitAnswer=()=>{
     requestAnswer = document.getElementById('requestAnswer').value;
-    if (isNaN(requestAnswer) || number1==0{
+    if (isNaN(requestAnswer) || number1==0){
         alert('please insert a number or start the game');
         return;
     }
