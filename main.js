@@ -1,6 +1,7 @@
 let playerName='';
 let level='';
 
+
 //start login form js
 letsGetStarted= ()=>{
     let playerNameElement =
@@ -39,3 +40,27 @@ setPlayerData = key => {
         .innerHTML=level;
 }
 //end game console js
+
+startGame=()=>{
+    generateQuestion();
+}
+
+generateQuestion=()=>{
+    let selectedMax=checkLevel();
+    let number1=generateNumber(1,selectedMax);
+    console.log(number1)
+}
+
+generateNumber=(min,max)=>{
+    return Math.floor(Math.random() * (max - min)+ min);//specific range ==> example 1-101
+}
+
+checkLevel=()=>{
+    let levelNumber=51; // default Beginner
+    switch (level){
+        case "Beginner": levelNumber=51;break;
+        case "Middle": levelNumber=101;break;
+        case "Advanced": levelNumber=1001;break;
+    }
+    return levelNumber;
+}
