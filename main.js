@@ -7,6 +7,7 @@ operators=['+','-','/','*','%'];
 let question='';
 let time=0;
 let counter=null;
+let requestAnswer;
 
 
 //start login form js
@@ -79,12 +80,26 @@ checkLevel=()=>{
     return levelNumber;
 }
 executeTime=()=>{
-    setInterval(classNames=>{
+   counter =  setInterval(()=>{
         time++;
         document.getElementsByClassName('counter-time')[0].innerHTML=time;
         if(time===60){
+            clearTime();
             alert('Failed');
         }
     },1000);
+}
+clearTime=()=>{
+    time=0;
+    clearInterval(counter)
+}
+submitAnswer=()=>{
+    requestAnswer = document.getElementById('requestAnswer').value;
+    if (isNaN(requestAnswer) || number1==0{
+        alert('please insert a number or start the game');
+        return;
+    }
+    console.log(requestAnswer);
+
 }
 //end game console js
