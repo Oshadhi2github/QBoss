@@ -10,6 +10,8 @@ let counter=null;
 let requestAnswer;
 let correctAnswer=0;
 let resultSheet=[];
+let correctAnswers=0;
+let wrongAnswers=0;
 
 
 //start login form js
@@ -107,14 +109,21 @@ submitAnswer=()=>{
 
 
     if (correctAnswer===Number(requestAnswer)){
+        //set correct and incorrect values
+        correctAnswers++;
         document.getElementById('congrats').innerHTML='Congratulations';
+        document.getElementById('congrats').style.color='#2980b9';
+        document.getElementById('correctAnswers').innerHTML=correctAnswers;
     }else{
+        wrongAnswers++;
         document.getElementById('congrats').innerHTML=`Oops...(A : ${correctAnswer})`;
         document.getElementById('congrats').style.color='#035400';
+
+        document.getElementById('wrongAnswers').innerHTML=wrongAnswers;
     }
+
     document.getElementById('question').innerHTML='Processing...'
     setTimeout(()=>{
-
         greeting();
     },3000);
 
