@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: flex-end;
 }
-.counter-outer{
+.counter-outer, .statistic-outer{
     height: 60px;
     background-color: white;
     margin: 0 20px;
@@ -45,6 +45,7 @@
 }
 .question-number{
     color: #d35400;
+    margin: 0;
 }
 .sep{
     width: 1px;
@@ -59,7 +60,20 @@
     text-align: right;
     padding: 0 10px;
     color: #d35400;
+    margin: 0;
 }
 .time span{
     color: #2980b9;
+}
+.statistic-outer{
+    padding: 0 10px;
+}
+.statistics{
+    padding: 0 10px;
+    color: #d35400;
+    margin: 0;
+}
+.start-button{
+    height: 60px;
+    margin: 0 20px;
 }
