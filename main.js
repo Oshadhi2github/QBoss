@@ -156,7 +156,12 @@ greeting=()=>{
     //=====clear greeting
     document.getElementById('congrats').innerHTML='';
     document.getElementById('requestAnswer').value='';
-    generateQuestion();
+    if (questionNumber!==10){
+        generateQuestion();
+    }else{
+        console.log('done!')
+    }
+
 
     console.log(resultSheet);
 }
