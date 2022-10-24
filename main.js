@@ -112,7 +112,9 @@ submitAnswer=()=>{
         document.getElementById('congrats').innerHTML=`Oops...(A : ${correctAnswer})`;
         document.getElementById('congrats').style.color='#035400';
     }
+    document.getElementById('question').innerHTML='Processing...'
     setTimeout(()=>{
+
         greeting();
     },3000);
 
@@ -139,7 +141,9 @@ greeting=()=>{
         time:time
     };
     resultSheet.push(result);
-
+    //=====clear greeting
+    document.getElementById('congrats').innerHTML='';
+    document.getElementById('requestAnswer').value='';
     generateQuestion();
 
     console.log(resultSheet);
