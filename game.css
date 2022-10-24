@@ -107,3 +107,26 @@
     margin: 0;
     padding-left: 10px;
 }
+.playground{
+    width: 80%;
+    height: 450px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+.bottom-outer{
+    width: 100%;
+    /* border: 1px solid red;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+.bottom-outer>h5{
+    color: white;
+    padding: 0 20px;
+}
+.question{
+    text-align: center;
+    color: #2980b9;
+}
