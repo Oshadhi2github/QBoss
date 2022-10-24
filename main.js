@@ -115,13 +115,13 @@ submitAnswer=()=>{
         //set correct and incorrect values
         answerState=true;
         correctAnswers++;
-        document.getElementById('congrats').innerHTML='Congratulations';
+        document.getElementById('congrats').innerHTML='Congratulations😊';
         document.getElementById('congrats').style.color='#2980b9';
         document.getElementById('correctAnswers').innerHTML=correctAnswers;
     }else{
         answerState=false;
         wrongAnswers++;
-        document.getElementById('congrats').innerHTML=`Oops...(A : ${correctAnswer})`;
+        document.getElementById('congrats').innerHTML=`Oops...😒(A : ${correctAnswer})`;
         document.getElementById('congrats').style.color='#035400';
 
         document.getElementById('wrongAnswers').innerHTML=wrongAnswers;
