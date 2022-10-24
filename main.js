@@ -9,6 +9,7 @@ let time=0;
 let counter=null;
 let requestAnswer;
 let correctAnswer=0;
+let resultSheet=[];
 
 
 //start login form js
@@ -56,6 +57,7 @@ startGame=()=>{
 
 
 generateQuestion= () =>{
+    clearTime();
     let selectedMax=checkLevel();
     number1=generateNumber(1,selectedMax);
     number2=generateNumber(1,selectedMax);
@@ -106,7 +108,22 @@ submitAnswer=()=>{
         document.getElementById('congrats').innerHTML='Congratulations';
     }else{
         document.getElementById('congrats').innerHTML=`Oops...(A : ${correctAnswer})`;
+        document.getElementById('congrats').style.color='#035400';
     }
+
+   let result={
+        question_id:'',
+       question: question,
+       request_Answer: requestAnswer,
+       answer:correctAnswer,
+       state:'',
+       time:time
+    };
+    resultSheet.push(result);
+
+    generateQuestion();
+
+    console.log(resultSheet);
 
 }
 findAnswer=()=>{
